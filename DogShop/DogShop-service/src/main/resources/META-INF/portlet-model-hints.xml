@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="gov.nasa.hq.dog.store.model.Leash">
+		<field name="uuid" type="String" />
+		<field name="leashId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="material" type="String" />
+		<field name="color" type="String" />
+		<field name="length" type="int" />
+	</model>
+	<model name="gov.nasa.hq.dogshop.model.Leash">
+		<field name="uuid" type="String" />
+		<field name="leashId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="material" type="String" />
+		<field name="color" type="String" />
+		<field name="length" type="int" />
+	</model>
+</model-hints>

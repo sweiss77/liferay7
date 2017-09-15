@@ -1,0 +1,5 @@
+Bundle-Name: DogShop-service
+Bundle-SymbolicName: gov.nasa.hq.dogshop.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true

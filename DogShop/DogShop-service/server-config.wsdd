@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<globalConfiguration>
+		<parameter name="adminPassword" value="admin" />
+		<parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl" />
+		<parameter name="sendXsiTypes" value="true" />
+		<parameter name="sendMultiRefs" value="true" />
+		<parameter name="sendXMLDeclaration" value="true" />
+		<parameter name="axis.sendMinimizedElements" value="true" />
+		<requestFlow>
+			<handler type="java:org.apache.axis.handlers.JWSHandler">
+				<parameter name="scope" value="session" />
+			</handler>
+			<handler type="java:org.apache.axis.handlers.JWSHandler">
+				<parameter name="scope" value="request" />
+				<parameter name="extension" value=".jwr" />
+			</handler>
+		</requestFlow>
+	</globalConfiguration>
+	<handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder" />
+	<handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper" />
+	<handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler" />
+	<transport name="http">
+		<requestFlow>
+			<handler type="URLMapper" />
+			<handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler" />
+		</requestFlow>
+	</transport>
+	<transport name="local">
+		<responseFlow>
+			<handler type="LocalResponder" />
+		</responseFlow>
+	</transport>
+	<service name="Plugin_nasa_LeashService" provider="java:RPC" style="rpc" use="encoded">
+		<arrayMapping xmlns:ns="urn:http.service.dogshop.hq.nasa.gov" xmlns:cmp-ns="http://model.dogshop.hq.nasa.gov" qname="ns:ArrayOf_tns2_LeashSoap" type="java:gov.nasa.hq.dogshop.model.LeashSoap[]" innerType="cmp-ns:LeashSoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></arrayMapping>
+		<typeMapping xmlns:ns="http://model.dogshop.hq.nasa.gov" qname="ns:LeashSoap" type="java:gov.nasa.hq.dogshop.model.LeashSoap" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></typeMapping>
+		<operation xmlns:operNS="urn:http.service.dogshop.hq.nasa.gov" xmlns:rtns="urn:http.service.dogshop.hq.nasa.gov" xmlns:tns2="http://model.dogshop.hq.nasa.gov" name="addLeash" qname="operNS:addLeash" returnQName="addLeashReturn" returnType="rtns:ArrayOf_tns2_LeashSoap" returnItemType="tns2:LeashSoap" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="color" type="tns:string"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="length" type="tns:int"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="material" type="tns:string"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.dogshop.hq.nasa.gov" xmlns:rtns="urn:http.service.dogshop.hq.nasa.gov" xmlns:tns2="http://model.dogshop.hq.nasa.gov" name="getLeashes" qname="operNS:getLeashes" returnQName="getLeashesReturn" returnType="rtns:ArrayOf_tns2_LeashSoap" returnItemType="tns2:LeashSoap" soapAction=""> </operation>
+		<parameter name="allowedMethods" value="addLeash getLeashes" />
+		<parameter name="className" value="gov.nasa.hq.dogshop.service.http.LeashServiceSoap" />
+		<parameter name="schemaUnqualified" value="http://model.dogshop.hq.nasa.gov,urn:http.service.dogshop.hq.nasa.gov" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="LeashServiceSoap" />
+		<parameter name="wsdlServiceElement" value="LeashServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_nasa_LeashService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.dogshop.hq.nasa.gov" />
+	</service>
+</deployment>

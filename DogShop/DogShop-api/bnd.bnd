@@ -1,0 +1,9 @@
+Bundle-Name: DogShop-api
+Bundle-SymbolicName: gov.nasa.hq.dogshop.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	gov.nasa.hq.dogshop.exception,\
+	gov.nasa.hq.dogshop.model,\
+	gov.nasa.hq.dogshop.service,\
+	gov.nasa.hq.dogshop.service.persistence
+-includeresource: META-INF/service.xml=../DogShop-service/service.xml
