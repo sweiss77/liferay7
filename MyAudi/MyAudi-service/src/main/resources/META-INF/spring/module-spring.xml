@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="gov.nasa.hq.myaudi.service.impl.AudiLocalServiceImpl" id="gov.nasa.hq.myaudi.service.AudiLocalService" />
+	<bean class="gov.nasa.hq.myaudi.service.impl.AudiServiceImpl" id="gov.nasa.hq.myaudi.service.AudiService" />
+	<bean class="gov.nasa.hq.myaudi.service.persistence.impl.AudiPersistenceImpl" id="gov.nasa.hq.myaudi.service.persistence.AudiPersistence" parent="basePersistence" />
+</beans>
