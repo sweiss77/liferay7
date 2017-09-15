@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<service name="Plugin_myaudi_AudiService" provider="java:RPC" style="rpc" use="encoded">
+		<operation xmlns:operNS="urn:http.service.myaudi.hq.nasa.gov" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="listAudis" qname="operNS:listAudis" returnQName="listAudisReturn" returnType="rtns:string" soapAction=""> </operation>
+		<parameter name="allowedMethods" value="listAudis" />
+		<parameter name="className" value="gov.nasa.hq.myaudi.service.http.AudiServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="AudiServiceSoap" />
+		<parameter name="wsdlServiceElement" value="AudiServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_myaudi_AudiService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.myaudi.hq.nasa.gov" />
+	</service>
+</deployment>

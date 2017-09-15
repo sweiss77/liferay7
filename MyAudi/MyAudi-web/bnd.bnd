@@ -1,0 +1,5 @@
+Bundle-Name: MyAudi-web
+Bundle-SymbolicName: gov.nasa.hq.myaudi.web
+Bundle-Version: 1.0.0
+Export-Package:
+-includeresource: META-INF/service.xml=../MyAudi-service/service.xml

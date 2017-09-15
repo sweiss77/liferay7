@@ -1,0 +1,9 @@
+Bundle-Name: MyAudi-api
+Bundle-SymbolicName: gov.nasa.hq.myaudi.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	gov.nasa.hq.myaudi.exception,\
+	gov.nasa.hq.myaudi.model,\
+	gov.nasa.hq.myaudi.service,\
+	gov.nasa.hq.myaudi.service.persistence
+-includeresource: META-INF/service.xml=../MyAudi-service/service.xml
