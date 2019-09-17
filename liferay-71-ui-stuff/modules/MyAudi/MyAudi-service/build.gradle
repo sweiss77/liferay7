@@ -1,0 +1,14 @@
+dependencies {
+	compileOnly group: "biz.aQute.bnd", name: "biz.aQute.bndlib"
+	compileOnly group: "com.liferay", name: "com.liferay.portal.spring.extender.api"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
+	compileOnly group: "org.osgi", name: "org.osgi.core"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations"
+	compileOnly project(":modules:MyAudi:MyAudi-api")
+}
+
+buildService {
+	apiDir = "../MyAudi-api/src/main/java"
+}
+
+group = "gov.nasa.hq.myaudi"
