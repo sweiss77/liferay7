@@ -10,7 +10,7 @@ taglib
 taglib
 	uri="http://liferay.com/tld/ui" prefix="liferay-ui"%>
 
-<%@ page import="gov.nasa.hq.liferay.angular.constants.AngularWebKeys"%>
+<%@ page import="gov.nasa.hq.myaudi.web.constants.AudiWebKeys"%>
 
 <liferay-theme:defineObjects />
 
@@ -21,5 +21,5 @@ taglib
 %>
 
 <%
-    String bootstrapRequire = (String) renderRequest.getAttribute(AngularWebKeys.BOOTSTRAP_REQUIRE);
+    String bootstrapRequire = (String) renderRequest.getAttribute(AudiWebKeys.BOOTSTRAP_REQUIRE);
 %>

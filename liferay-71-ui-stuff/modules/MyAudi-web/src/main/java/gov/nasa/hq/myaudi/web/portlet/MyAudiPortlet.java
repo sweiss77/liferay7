@@ -1,4 +1,4 @@
-package gov.nasa.hq.liferay.angular.portlet;
+package gov.nasa.hq.myaudi.web.portlet;
 
 import java.io.IOException;
 
@@ -14,8 +14,8 @@ import com.liferay.frontend.js.loader.modules.extender.npm.JSPackage;
 import com.liferay.frontend.js.loader.modules.extender.npm.NPMResolver;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
-import gov.nasa.hq.liferay.angular.constants.AngularPortletKeys;
-import gov.nasa.hq.liferay.angular.constants.AngularWebKeys;
+import gov.nasa.hq.myaudi.web.constants.AudiWebKeys;
+import gov.nasa.hq.myaudi.web.constants.MyAudiPortletKeys;
 
 /**
  * @author sweiss
@@ -25,10 +25,10 @@ import gov.nasa.hq.liferay.angular.constants.AngularWebKeys;
         "com.liferay.portlet.instanceable=true",
         "javax.portlet.init-param.template-path=/",
         "javax.portlet.init-param.view-template=/view.jsp",
-        "javax.portlet.name=" + AngularPortletKeys.Angular,
+        "javax.portlet.name=" + MyAudiPortletKeys.MyAudi,
         "javax.portlet.resource-bundle=content.Language",
         "javax.portlet.security-role-ref=power-user,user" }, service = Portlet.class)
-public class AngularPortlet extends MVCPortlet {
+public class MyAudiPortlet extends MVCPortlet {
 
     @Override
     public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
@@ -36,8 +36,8 @@ public class AngularPortlet extends MVCPortlet {
 
         JSPackage jsPackage = _npmResolver.getJSPackage();
 
-        renderRequest.setAttribute("mainRequire", _npmResolver.resolveModuleName("MyAngularPortlet") + " as main");
-        renderRequest.setAttribute(AngularWebKeys.BOOTSTRAP_REQUIRE,
+        renderRequest.setAttribute("mainRequire", _npmResolver.resolveModuleName("MyAudi-web") + " as main");
+        renderRequest.setAttribute(AudiWebKeys.BOOTSTRAP_REQUIRE,
                 jsPackage.getResolvedId() + " as bootstrapRequire");
         super.doView(renderRequest, renderResponse);
     }
