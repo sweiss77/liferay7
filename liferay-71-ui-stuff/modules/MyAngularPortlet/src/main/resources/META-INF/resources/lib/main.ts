@@ -9,7 +9,7 @@ export default function(rootId: any) {
 		.bootstrapModule(AppModule)
 		.then((injector: any) => {
 
-			// Load the bootstrap component dinamically so that we can attach it
+			// Load the bootstrap component dynamically so that we can attach it
 			// to the portlet's DOM, which is different for each portlet
 			// instance and, thus, cannot be determined until the page is
 			// rendered (during runtime).
