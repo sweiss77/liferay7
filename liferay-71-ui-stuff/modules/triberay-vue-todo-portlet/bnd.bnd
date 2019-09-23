@@ -1,0 +1,5 @@
+Bundle-Name: triberay-vue-todo-portlet
+Bundle-SymbolicName: com.triberay.vue.todo.portlet
+Bundle-Version: 1.0.0
+Export-Package: com.triberay.vue.todo.portlet.constants
+Web-ContextPath: /triberay-vue-todo-portlet
