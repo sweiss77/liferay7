@@ -15,7 +15,7 @@ package gov.nasa.hq.myaudi.model.impl;
 import aQute.bnd.annotation.ProviderType;
 
 /**
- * The extended model implementation for the Audi service. Represents a row in the &quot;myaudi_Audi&quot;
+ * The extended model implementation for the Audi service. Represents a row in the &quot;NASA_Audi&quot;
  * database table, with each column mapped to a property of this class.
  *
  * <p>

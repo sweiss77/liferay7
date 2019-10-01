@@ -11,9 +11,9 @@
  */
 package gov.nasa.hq.myaudi.exception;
 
-import com.liferay.portal.kernel.exception.NoSuchModelException;
-
 import aQute.bnd.annotation.ProviderType;
+
+import com.liferay.portal.kernel.exception.NoSuchModelException;
 
 /**
  * @author Brian Wing Shun Chan

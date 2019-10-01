@@ -3,7 +3,7 @@
 
 <hibernate-mapping auto-import="false" default-lazy="false">
 	<import class="gov.nasa.hq.myaudi.model.Audi" />
-	<class name="gov.nasa.hq.myaudi.model.impl.AudiImpl" table="myaudi_Audi">
+	<class name="gov.nasa.hq.myaudi.model.impl.AudiImpl" table="NASA_Audi">
 		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="audiId" type="long">
 			<generator class="assigned" />
 		</id>

@@ -1,4 +1,4 @@
-create table myaudi_Audi (
+create table NASA_Audi (
 	uuid_ VARCHAR(75) null,
 	audiId LONG not null primary key,
 	groupId LONG,

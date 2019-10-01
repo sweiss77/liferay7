@@ -1,5 +1,6 @@
 dependencies {
-	compileOnly group: "biz.aQute.bnd", name: "biz.aQute.bndlib"
+	compileOnly group: "biz.aQute.bnd", name: "biz.aQute.bnd.annotation", version: "3.5.0"
+	compileOnly group: "com.liferay", name: "com.liferay.petra.string"
 	compileOnly group: "com.liferay", name: "com.liferay.portal.spring.extender.api"
 	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
 	compileOnly group: "org.osgi", name: "org.osgi.core"
