@@ -1,5 +1,0 @@
-Bundle-Name: MyAngularPortlet
-Bundle-SymbolicName: gov.nasa.hq.liferay.angular
-Bundle-Version: 1.0.0
-Export-Package: gov.nasa.hq.liferay.angular.constants
-Web-ContextPath: /MyAngularPortlet
