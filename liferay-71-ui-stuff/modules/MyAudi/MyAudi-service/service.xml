@@ -3,7 +3,7 @@
 
 <service-builder package-path="gov.nasa.hq.myaudi">
 
-  <namespace>NASA</namespace>
+  <namespace>myaudi</namespace>
   <!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" 
     table="foo" tx-manager="sampleTransactionManager uuid="true""> -->
   <entity local-service="true" name="Audi" remote-service="true" uuid="true">

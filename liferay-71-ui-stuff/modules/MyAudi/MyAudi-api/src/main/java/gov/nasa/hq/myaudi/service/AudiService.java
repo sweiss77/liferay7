@@ -39,7 +39,7 @@ import com.liferay.portal.kernel.transaction.Transactional;
 @AccessControlled
 @JSONWebService
 @OSGiBeanProperties(property =  {
-	"json.web.service.context.name=nasa", "json.web.service.context.path=Audi"}, service = AudiService.class)
+	"json.web.service.context.name=myaudi", "json.web.service.context.path=Audi"}, service = AudiService.class)
 @ProviderType
 @Transactional(isolation = Isolation.PORTAL, rollbackFor =  {
 	PortalException.class, SystemException.class})
