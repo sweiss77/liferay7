@@ -1,5 +1,0 @@
-Bundle-Name: MyAudi-web
-Bundle-SymbolicName: gov.nasa.hq.myaudi.web
-Bundle-Version: 1.0.0
-Export-Package: gov.nasa.hq.myaudi.web.constants
-Web-ContextPath: /MyAudi-web
